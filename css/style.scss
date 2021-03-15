@@ -1,0 +1,1105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab&display=swap');
+
+$montserrat: 'Montserrat', sans-serif;
+$robotoslab: 'Roboto Slab', serif;
+
+
+$white: #ffffff;
+$grey: #555555;
+$orange: #c0301c;
+$aboutbg: #f8f8f8;
+
+body{
+    font-size: 16px;
+    font-family: $robotoslab;
+    color: $grey;
+}
+
+p{
+    line-height: 25px;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+//header start
+//nav start
+header{
+    
+    min-height: 770px;
+    background-position: center center; 
+    background-size: cover;
+
+    .header{
+        
+         nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px; 
+
+             .logo{
+                h1{
+                    font-size: 23px;
+                    color: $white;
+                    font-weight: bold;
+                    font-family: $montserrat;
+                    margin-left: 30px;
+                }
+            } 
+
+            #menu{
+                display: flex;
+                justify-content: space-between;
+                flex-basis: 600px;
+                li{
+                    list-style-type: none;
+
+                    a{
+                        text-decoration: none;
+                        color: $white;
+                        font-family: $montserrat;
+                        font-size: 14px;
+                        font-weight: bold;
+                        
+                        &.menu-active {
+                            color: $white;
+                        }
+
+                        &:hover {
+                            color: $grey;
+                        }
+                        
+                    }
+
+
+                }
+
+            }
+
+            .mobile-menu-btn {
+                display: none;
+                cursor: pointer;
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    fill: $white;
+                }
+            }
+
+            
+
+           
+
+            @media screen and (max-width: 810px) {
+                #menu{
+                    flex-basis: 550px;
+                    font-size: 15px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .mobile-menu-btn {
+                    display: block;
+                }
+                 #menu{
+                    display: none;
+                }
+            
+            }
+  
+        }
+        .about-startup{
+            text-align: center;
+            color: $white;
+            margin: 260px auto auto auto;
+            max-width: 500px;
+            .about-item{
+                h1{
+                    font-family:  $montserrat;
+                    font-size: 35px;
+                    margin-bottom: 6px;
+                    
+                }
+
+                p{
+                    font-size: 12px;
+                }
+
+                button{
+
+                    margin-top: 12px;
+                    border: 2px solid $white;
+                    background: none;
+                    color: $white;
+                    font-size: 15px;
+                    padding: 7px 28px;
+                    cursor: pointer;
+                    transition: .5s;
+                    
+                   
+                    &:hover {
+                        border-color: $grey;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+//header end
+//nav end
+
+
+
+//main start
+main{
+
+//services start
+    .services{
+        text-align: center;
+        display: flex;
+            .services-content{
+                
+                .services-top{
+                    flex-flow: wrap;
+                    justify-content: space-between;
+                    font-family: $montserrat;
+                    margin-top: 103px;
+
+                    h3, img, p{
+                        margin-bottom: 30px;
+                    }
+                }
+                .services-bottom{
+                    justify-content: center;
+                    display: flex;
+                    margin-bottom: 50px;
+                    flex-wrap: wrap;
+                    
+                    
+                    .content{
+                        flex-basis: 30%;
+                        text-align: center;
+                        
+                        img{
+                            display: block;
+                            margin: 10px auto;
+                            width: 55px;
+                            
+                        }
+                        p{
+                            margin: 10px;
+                            font-size: 13px;
+                            font-family: $robotoslab;
+                           
+                        }
+                    }
+                    @media  screen and (max-width: 980px) {
+                        justify-content: center;
+    
+                        .content{
+                            text-align: center;
+                            flex-basis: 90%;
+
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                            
+                        
+                        
+                    }
+                }
+                
+        }
+       
+
+       
+    }
+//services end
+
+
+//about-us start
+    .about-us{
+        background-color: $aboutbg;
+        
+        .about-content{
+            
+            .about-top{
+                margin-top: 100px;
+                font-family: $montserrat;
+                text-align: center;
+                flex-basis: 555px;
+                h3{
+                    margin-bottom: 30px;
+                }
+                img{
+                    margin-bottom: 30px;
+                }
+                p{
+                    margin-bottom: 60px;
+                }
+                
+            }
+            .content{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+                
+                
+                .content-left{
+                    flex-basis: 45%;
+                }
+                .content-right{
+                    
+                    flex-basis: 45%;
+                }
+               
+
+                @media screen and (max-width: 900px) {
+                    justify-content: center;
+                    .content-right{
+                        flex-basis: 90%;
+                        
+                      
+                    }
+                    .content-left{
+                        margin-bottom: 40px;
+                        flex-basis: 90%;
+                      
+                    }
+    
+                    }
+            }
+            
+
+         
+
+
+//swipper start
+           .swiper-container{
+                width: 100%;
+                height: 100%;
+                margin-bottom: 100px;
+            
+                .swiper-wrapper{
+                    margin-top: 76px;
+                    
+                    .swiper-slide{
+                        justify-content: space-between;
+                      
+                        .item-img{
+                            width: 270px;
+                            height: 252px;
+                            position: relative;
+                            display: flex; 
+                            
+                            &:hover{
+                                    
+                                    opacity: 0.5;
+                                }
+                            
+                            img{
+                                width: 100%;
+                                height: auto;
+
+                               
+                                
+                                
+                            }
+                            
+
+                            
+                        } 
+                        .item-img-logo{
+                                position: absolute;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: -60px; 
+                                margin-left: 70px;  
+                                                         
+                            .logo{
+                                padding: 4px;
+                                display: flex;
+
+                                &:hover{
+                                    
+                                    opacity: 0.8;
+                                }
+                            }
+                            
+  
+                        
+                        }
+                            h4{
+                                text-align: center;
+                                font-family: $montserrat;
+                                font-size: 14px;
+                                margin-top: 19px;
+                                
+                                
+                            }
+                            p{
+                                text-align: center;
+                                font-size: 13px;
+                                font-family: $montserrat;
+                            }
+                    }
+                }
+            }
+
+               
+        }
+          
+           .swiper-button-prev{
+               width: 30px;
+               height: 38px;
+               left: 0;
+               &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.2);
+                
+            }
+           }
+            .swiper-button-next{
+                width: 30px;
+                height: 38px;
+                right: 10px;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.2);
+                    
+                }
+            }
+    
+    }
+
+//swipper end
+//about-us end
+
+
+//latest-works start
+    .latest-works{
+        .about-works{
+            .works-title{
+                margin-top: 100px;
+                font-family: $montserrat;
+                text-align: center;
+                flex-basis: 555px;
+                h3{
+                    margin-bottom: 30px;
+                }
+                img{
+                    margin-bottom: 30px;
+                }
+            }
+
+            .works-menu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                #w-menu{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-basis: 410px;
+                    margin-bottom: 70px;
+
+                   
+                    li{
+                        list-style-type: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $grey;
+                            font-family: $montserrat;
+                            font-size: 16px;
+
+                            &.menu_active {
+                                color: #c0301c;
+                            }
+
+                            &:hover {
+                                color: #c0301c;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .works-items{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                margin-bottom: 100px;
+                .works-item{
+                    //margin-right: 0px;
+                    margin-left: 15px;
+                    flex-basis: calc(100% / 3 - 15px);
+                    height: 318px;
+                    width: 365px;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                    position: relative; 
+                    
+
+                   
+
+                    @media screen and (max-width: 972px) {
+                        flex-basis: calc(100% / 2 - 15px);
+                        max-height: 350px;
+                        max-width: 350px;
+                    }
+
+                    @media screen and (max-width: 565px) {
+                        flex-basis: calc(100% / 1);
+                        max-height: 350px;
+                        max-width: 350px;
+                    }
+
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%; 
+                    }
+
+                    .works-items-text{
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        color: $white;
+                        opacity: 0;
+                        transition: opacity .5s ;
+                        text-align: center; 
+
+                        &:hover {
+                                background: #c0301c;
+                                opacity: 0.7;
+                               
+                        }
+                        
+
+                        h3 {
+                            font-size: 18px;
+                            margin: 8px;
+                        }
+    
+                        p{
+                            font-size: 12px;
+                            margin-bottom: 14px;
+                            font-family: $montserrat;
+                        }
+    
+                        a {
+                             display: block;
+                            background: white;
+                            padding: 13px 30px;
+                            width: fit-content;
+                            color: #c0301c;
+                            text-decoration: none;
+                            font-size: 14px; 
+                            font-family: $montserrat;
+                            font-weight: bold;
+
+                          
+                        }
+
+                        
+                    }
+                    
+                }
+            }
+            
+            
+        }
+    }
+//latest-works end
+// .get-in-touch start
+    .get-in-touch{
+       
+        .get-in-touch-bg{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            height: 368px;
+            margin-bottom: 100px;
+            
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.9;
+                transition: opacity .5s ;
+                    &:hover{
+                       opacity: 0.6;
+                       
+                    }
+            }
+                .texts{
+                    position: absolute;
+                    color: $white;
+                   
+                    
+                    h2{
+                        margin-top: 10px;
+                        font-family: $montserrat;
+                        font-size: 20px;
+                    }
+                    .btn{
+                        margin-top: 12px;
+                        border: 2px solid $white;
+                        font-size: 15px;
+                        font-family: $montserrat;
+                        background: none;
+                        color: $white;
+                        font-size: 15px;
+                        padding: 7px 28px;
+                        cursor: pointer;
+                        transition: .5s;
+                    }
+
+                   
+                }
+
+               
+ 
+        }
+    }
+
+// .get-in-touch end
+
+//blog-posts start
+    .blog-posts{
+        .about-blog{
+            
+            .blog-title{
+                font-family: $montserrat;
+                text-align: center;
+                flex-basis: 555px;
+                margin-bottom: 45px;
+                
+                h3{
+                    margin-bottom: 32px;
+                }
+                img{
+                    
+                    margin-bottom: 32px;
+                }
+
+
+            }
+            .blog-contain{
+                .blog-contain-top{
+                    margin-bottom: 32px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    .blog-img{
+                        max-width: 370px;
+                        height: 260px;
+                      
+                        img{
+                            width: 100%;
+                            height: 100%;
+                          
+                        }
+                    }
+                    .right-contain{
+                      
+                        flex-basis: 60%;
+                        display: flex;
+                        flex-flow: wrap;
+                        
+                        .rectangle{
+                            width: 65px;
+                            height: 67px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            p{
+                                position: absolute;
+                                align-items: center;
+                                                                
+                            }
+                        }
+                        .text{
+                            margin: 10px 10px 10px 25px ;
+                            h3{
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                                font-family: $montserrat;
+                               
+                                &:hover{
+                                    color: #c0301c;
+                                }
+                               
+                            }
+                            span{
+                                
+                                font-style: italic;
+                                a{
+                                    
+                                    text-decoration: none;
+                                    font-style: italic;
+                                    font-family: $montserrat;
+                                    font-size: 13px;
+
+                                    &:hover{
+                                        color: #c0301c;
+                                    }
+                                }
+                            }
+                        }
+                        
+
+                        p{
+                            font-size: 13px;
+                            font-family: $montserrat;
+
+                        }
+                        a{
+                            color: $grey;
+                            font-weight: bold;
+                            text-decoration: none;
+                            font-family: $montserrat;
+
+                            &:hover{
+                                color: #c0301c;
+                            }
+                        }
+                       
+                    }
+                    }
+                    @media screen and(max-width: 1000px){
+                        .blog-contain-top{
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            text-align: center;
+                        }
+                        .right-contain{
+                            margin: 10px 0;
+                            max-width: 369px;
+                        }
+                       
+                        
+                    }
+
+                    
+                }
+
+                .blog-contain-bottom{
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    .blog-img{
+                        max-width: 370px;
+                        height: 260px;
+                      
+                        img{
+                            width: 100%;
+                            height: 100%;
+                          
+                        }
+                    }
+                    .right-contain{
+                      
+                        flex-basis: 60%;
+                        display: flex;
+                        flex-flow: wrap;
+                        //justify-content: space-around;
+                       // align-items: flex-start;
+                        
+
+                                                
+                        .rectangle{
+                            width: 65px;
+                            height: 67px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            p{
+                                position: absolute;
+                                align-items: center;
+                                                                
+                            }
+                        }
+                        .text{
+                            margin: 10px 10px 10px 25px ;
+                            h3{
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                                font-family: $montserrat;
+                               
+                                &:hover{
+                                    color: #c0301c;
+                                }
+                                
+                                
+                            }
+                            span{
+                                
+                                font-style: italic;
+                                a{
+                                    
+                                    text-decoration: none;
+                                    font-style: italic;
+                                    font-family: $montserrat;
+                                    font-size: 13px;
+
+                                    &:hover{
+                                        color: #c0301c;
+                                    }
+                                }
+                            }
+                        }
+                        
+
+                        p{
+                            font-size: 13px;
+                            font-family: $montserrat;
+
+                        }
+                        a{
+                            color: $grey;
+                            font-weight: bold;
+                            text-decoration: none;
+                            font-family: $montserrat;
+
+                            &:hover{
+                                color: #c0301c;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and(max-width: 1000px){
+                    .blog-contain-bottom{
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    .right-contain{
+                        margin: 10px 0;
+                        max-width: 369px;
+                    }
+                   
+                    
+                }
+                
+            }
+        }
+    }
+//blog-posts end
+
+
+//our clients start
+    .our-clients{
+        background-color: $aboutbg;
+        margin-top: 47px;
+        padding-bottom: 60px;
+        .clients-content{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            padding-top: 37px;
+            //flex-basis: 100%;
+            .logos{
+                display: flex;
+                max-width: 700px;
+                align-items: center;
+               
+                .clients-logo{
+        
+                    align-items: center;
+                    margin: 10px;
+                
+                }
+                
+            }  
+            @media screen and(max-width: 726px){
+                    
+                .logos{
+                    flex-flow: column;
+                    
+                }
+             }  
+        }
+
+        .about-slider{
+            max-width: 660px;
+            margin: 20px auto auto auto;
+            
+            .owl-carousel{
+
+                .about-item{
+                    text-align: center;
+                    p{
+                        font-family: $montserrat;
+                        margin-bottom: 22px;
+                    }
+                    h3{
+                        font-family: $montserrat;
+                        margin-bottom: 32px;
+                    }
+                }
+                .owl-dots {
+                    display: flex;
+                    justify-content: center;
+                    margin: 37px auto;
+                    .owl-dot{
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: transparent;
+                        background: #dddddd;
+                        border: 1px solid $white;
+                        font-size: 20px;
+                        margin-right: 10px;
+
+                        &.active {
+                            background: #c0301c;
+                            border-color:  #c0301c;
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+//our clients end
+
+
+//contact start
+    .contact{
+        .contact-content{
+            margin-bottom: 50px;
+            .contact-title{
+                margin-top: 50px;
+                margin-bottom: 45px;
+                font-family: $montserrat;
+                text-align: center;
+                flex-basis: 555px;
+                h3{
+                    margin-bottom: 30px;
+                }
+                img{
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            .contact-info-form{
+                padding: 5px;
+                 .contact-form{
+                     display: flex;
+                     justify-content: space-evenly;
+
+
+                     
+                     
+                     
+                     .contact-info-left{
+                         max-width: 300px;
+                         margin-left: 10px;
+                         
+                         
+                         .contact-info{
+                             margin-bottom: 25px;
+                             h5{
+                                 display: flex;
+                                 align-items: center;
+                                 
+                                 
+                                 
+                                 img{
+                                     margin-right: 21px;
+                                 }
+                             
+                             }
+                             p{
+                                 
+                                 margin: 10px 10px 10px 31px;
+                                 font-size: 14px;
+                                 font-family: $montserrat;
+                                 
+                            }
+
+                            
+                         }
+                        
+                     }
+                    
+
+                     
+                     
+                 }
+
+                 @media screen and (max-width: 508px){
+                           
+                    .contact-form{
+                        flex-wrap: wrap;
+                       
+                    }
+                    
+                }
+
+
+
+                 .contact-info-right{
+                     display: flex;
+                     justify-content: center;
+                     max-width: 500px;
+                     
+                     form{
+                        display: flex;
+                        flex-flow: wrap;
+                         
+                        #button{
+                                padding: 7px 30px;
+                                margin: 5px 10px;
+                                border: 2px solid $orange;
+                                background-color: $orange;
+                                color: $white;
+                                &:hover{
+                                    background-color: $white;
+                                    color: $orange;
+                                }
+                        }
+                        
+                         label{
+                             
+                             align-items: center;
+                             justify-content: center;
+                         
+                                input{
+                                    padding: 16px 30px;
+                                    margin: 5px 10px;
+                                    border: 2px solid $orange;
+                               
+
+                                &:hover{
+                                    border: 2px solid #c0301c;
+
+
+                                }
+
+
+                            
+                            }
+                           
+
+
+                         }
+                         
+                    }
+                    
+
+                     
+                 }
+                 
+             }
+        }
+    }
+//contact end
+
+
+//main end
+
+//footer start
+footer{
+    background: #c0301c;
+    
+    .footer{
+        position: relative;
+        margin-top: 50px;
+        display: flex;
+        //flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        height: 307px;
+       
+     
+
+        .logos{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            svg{
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+                fill: $white;
+                cursor: pointer;
+                &:hover{
+                    fill: $grey;
+                }
+            }
+        }
+         .web_info{
+            position: absolute;
+            bottom: 30px;
+            color: $white;
+            font-family: $montserrat;
+            font-size: 13px;
+            display: flex;
+            
+            p{
+               margin: 20px;
+            }
+        } 
+
+        
+    }
+}
+
+////footer end
